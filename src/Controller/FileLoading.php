@@ -24,9 +24,7 @@ class FileLoading {
     }
     
     
-    /**
-     * Handles file request, located in public\client folder
-     */
+   
     public function fileHandling(Request $request,string $dirname,string $filename):Response
     {
         $path = $this->parameterBag->get('kernel.project_dir')."\public\client\\$dirname\\$filename";
