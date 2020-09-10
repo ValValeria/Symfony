@@ -8,31 +8,38 @@ use Symfony\Component\Routing\Annotation\Route;
 
 use Symfony\Component\HttpFoundation\Request;
 
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
+use Symfony\Component\Filesystem\Filesystem;
 
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Mime\MimeTypes;
 
 
 class FileLoading {
     
-    protected $parameterBag;
-    protected const mimeTypes = ["css"=>"text/css","js"=>"text/javascript"];
+    protected $fs;
+    protected $mimes;
 
-    public function __construct(ParameterBagInterface $parameterBag)
+    public function __construct()
     {
-        $this->parameterBag = $parameterBag;
+        $this->fs = new Filesystem();
+        $this->mimes = new MimeTypes();
     }
     
-    
+    /**
+     * Manage file upload
+     * @param Request $request
+     * @param string $dirname
+     * @param string $filename
+     * @return Response
+     */
     public function fileHandling(Request $request,string $dirname,string $filename):Response
     {
-        $path = $this->parameterBag->get('kernel.project_dir')."\public\client\\$dirname\\$filename";
+        $path = "\\public\\client\\$dirname\\$filename";
         $response = new Response();
-        $extension = pathinfo($path,PATHINFO_EXTENSION);
+        $mimeType = $this->mimes->guessMimeType($filename);
 
-        if (file_exists($path) && in_array($extension,array_keys(self::mimeTypes))) {
+        if ($this->fs->exists($path) && $mimeType) {
             $content = file_get_contents($path);
-            $response->headers->set('Content-Type',self::mimeTypes[$extension]);
+            $response->headers->set('Content-Type',$mimeType);
             $response->setContent($content);
         } else {
             $response->setContent("No file was found".$path);

@@ -4,6 +4,6 @@ mainPage:
      methods: GET
 
 fileLoading:
-     path: /public/{dirname}/{filename}
+     path: /client/{dirname}/{filename}
      controller: App\Controller\FileLoading::fileHandling
      methods: GET
