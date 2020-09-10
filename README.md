@@ -6,6 +6,7 @@
 
 ## Tasks for developers
 - [x]  Create a "basic layout"
+- [ ]  Create an "index page"
 
 ## How to run the app
  This is the common workflow to serve a Symfony project
