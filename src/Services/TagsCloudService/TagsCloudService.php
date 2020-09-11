@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Services;
+namespace App\Services\TagsCloudService;
 
 
 use App\Repository\SearchesRepository;
 
-class TagCloudService
+class TagsCloudService implements TagsCloudInterface
 {
     private $repository;
     private $tagsCount;
