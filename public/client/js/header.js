@@ -12,4 +12,10 @@ document.addEventListener('DOMContentLoaded',()=>{
             el.classList.remove('active')
         }
     })
+
+    const menuIcon = document.querySelector('.navbar-toggler');
+
+    menuIcon.onclick = ()=>{
+        document.querySelector('#navbarSupportedContent').classList.toggle('collapse')
+    }
 })

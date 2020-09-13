@@ -11,10 +11,11 @@ body{
     min-height:100vh;
     overflow-x:hidden;
     position: relative !important;
+    min-height:90.9vh !important;
 }
 
 .section{
-    min-height:90.4vh;
+    min-height:90.9vh;
 }
 .banner__content p{
     max-width:500px;
@@ -24,6 +25,10 @@ body{
     font-size: 48px;
     -webkit-text-stroke: medium;
     padding-top:200px;
+}
+
+.banner__search{
+    border-radius: 15px;
 }
 
 .banner__content button{
@@ -100,6 +105,10 @@ footer{
   #navbarSupportedContent {
     max-width:570px;
     text-align:center;
+  }
+
+  #navbarSupportedContent ul {
+      justify-content: flex-end;
   }
 }
 
