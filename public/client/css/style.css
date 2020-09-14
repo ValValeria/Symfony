@@ -19,6 +19,7 @@ body{
 }
 .banner__content p{
     max-width:500px;
+    margin:0 auto;
 }
 .banner__content h6{
     margin-bottom: 30px;
