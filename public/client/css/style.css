@@ -29,6 +29,15 @@ body{
 
 .banner__search{
     border-radius: 15px;
+    height: 52px;
+    border-radius: 25px;
+    margin-right: 16px;
+}
+
+.banner__search-area{
+    padding: 13px 15px;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 26px;
 }
 
 .banner__content button{
@@ -52,7 +61,6 @@ body{
     cursor: pointer;
     outline: 0;
     font-weight: 800;
-    margin-top: 10px;
 }
 
 .btn-special:hover{
