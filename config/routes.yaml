@@ -3,7 +3,3 @@ mainPage:
      controller: App\Controller\MainPage::mainPage
      methods: GET
 
-fileLoading:
-     path: /client/{dirname}/{filename}
-     controller: App\Controller\FileLoading::fileHandling
-     methods: GET

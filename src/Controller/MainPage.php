@@ -8,7 +8,7 @@ class MainPage extends AbsController{
     
     public function mainPage()
     {
-        return $this->render('Pages/HomePage.html.twig');
+        return $this->render('Pages/home_page.html.twig');
     }
 }
 
