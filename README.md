@@ -1,11 +1,13 @@
-# ODClient
+# OxDictionary
+ Free online dictionary for learners of British and American English with definitions, pictures, example sentences
 
-## Requirements
-* PHP 7.2.5 or higher
-* Composer
+## Rest Api
+ * GET / - home page
+ > ![alt text](https://github.com/alexanderzenchenko/odclient/blob/other/screen.PNG?raw=true)
 
-## How to install
-* Clone to your local repository
-* `cd` into cloned repository folder
-* Execute in terminal `composer install`
-* If you use symfony cli execute `symfony server:start` or `php -S localhost:8000 -t public/` 
+## Tasks for developers
+- [x]  Create a "basic layout"
+
+## How to run the app
+ This is the common workflow to serve a Symfony project
+ * **symfony server:start**
