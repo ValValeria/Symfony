@@ -8,9 +8,12 @@
            <p class="mb-4">
              The largest and most trusted free online dictionary for learners of British and American English
            </p>
-           <div class="banner__search-area d-flex align-items-center">
+           <div class="banner__search-area d-flex align-items-center mb-4">
              <input class="form-control  banner__search mr-3" type="text" placeholder="Type here ..." aria-label="Search">
              <button class="btn-special">Search</button>
+           </div>
+           <div class="tags_cloud">
+               {{ render(path('tags_cloud')) }}
            </div>
           </div>
      </div>
