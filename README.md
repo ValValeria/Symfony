@@ -3,7 +3,7 @@
 
 ## Rest Api
  * GET / - home page
- > ![alt text](https://github.com/alexanderzenchenko/odclient/blob/main/screen.PNG?raw=true)
+ > ![alt text](https://github.com/alexanderzenchenko/odclient/blob/master/screen.PNG)
 
 ## Tasks for developers
 - [x]  Create a "basic layout"
