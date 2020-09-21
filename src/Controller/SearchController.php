@@ -15,7 +15,8 @@ class SearchController extends AbstractController
 
 
         return $this->render('Pages/search_page.html.twig', [
-            'word' => $word
+            'word' => $word,
+            'results' => []
         ]);
     }
 }
