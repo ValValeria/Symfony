@@ -9,7 +9,7 @@
              The largest and most trusted free online dictionary for learners of British and American English
            </p>
            <div class="banner__search-area d-flex align-items-center">
-               <form action="/search" method="get">
+               <form action="{{ path('searchPage') }}" method="get">
                     <input class="form-control  banner__search mr-3" type="text" placeholder="Type here ..." aria-label="Search" name="word">
                     <button class="btn-special">Search</button>
                </form>
