@@ -10,7 +10,6 @@ class MainPage extends AbstractController
 {
     public function mainPage()
     {
-        return $this->render('Pages/home_page.html.twig', array(
-        ));
+        return $this->render('Pages/home_page.html.twig');
     }
 }
