@@ -2,3 +2,8 @@ mainPage:
      path: /
      controller: App\Controller\MainPage::mainPage
      methods: GET
+
+searchPage:
+     path: /search
+     controller: App\Controller\SearchController::index
+     methods: GET
