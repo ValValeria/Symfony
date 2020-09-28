@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded',()=>{
+
     const path = window.location.pathname;
     
     const links = Array.from(document.querySelectorAll('nav .nav-link'))
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded',()=>{
     menuIcon.onclick = ()=>{
         document.querySelector('#navbarSupportedContent').classList.toggle('collapse')
     }
+          
 })

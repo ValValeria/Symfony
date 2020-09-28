@@ -1,16 +1,14 @@
 {% extends "base_layout.html.twig" %}
 
 {% block content %}
-    <div class="banner__area section d-flex align-items-center justify-content-center">
-        <div class="banner__wrap">
-            <div class="banner__content text-white text-center">
+    <div class="banner__area section center">
+        <div class="banner__wrap d-flex justify-content-start ">
+           <div class="banner__content  center align-items-start flex-column">
+             <div class="text-left">
                 <h6 class="mb-4">Oxford Dictionary</h6>
-                <p class="mb-4">
-                    The largest and most trusted free online dictionary for learners of British and American English
-                </p>
                 <div class="banner__search-area d-flex align-items-center mb-4">
                     <form action="{{ path('searchPage') }}" method="get">
-                        <input class="form-control  banner__search mr-3" type="text" placeholder="Type here ..."
+                        <input class=" banner__search form-control  mr-3" type="text" placeholder="Type here ..."
                                aria-label="Search" name="word">
                         <button class="btn-special">Search</button>
                     </form>
@@ -19,6 +17,10 @@
                 <div class="tags_cloud">
                     {{ render(path('tags_cloud')) }}
                 </div>
+               </div>
+            </div>
+            <div class="banner__img">
+               <img  src="/client/img/banner.svg" alt="..."/>
             </div>
         </div>
     </div>
