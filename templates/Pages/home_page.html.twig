@@ -1,26 +1,25 @@
-{% extends "base_layout.html.twig"%}
+{% extends "base_layout.html.twig" %}
 
 {% block content %}
- <div class="banner__area section d-flex align-items-center justify-content-center">
-     <div class="banner__wrap">
-         <div class="banner__content text-white text-center">
-           <h6 class="mb-4">Oxford Dictionary</h6>
-           <p class="mb-4">
-             The largest and most trusted free online dictionary for learners of British and American English
-           </p>
-           <div class="banner__search-area d-flex align-items-center">
-               <form action="{{ path('searchPage') }}" method="get">
-                    <input class="form-control  banner__search mr-3" type="text" placeholder="Type here ..." aria-label="Search" name="word">
-                    <button class="btn-special">Search</button>
-               </form>
-           <div class="banner__search-area d-flex align-items-center mb-4">
-             <input class="form-control  banner__search mr-3" type="text" placeholder="Type here ..." aria-label="Search">
-             <button class="btn-special">Search</button>
-           </div>
-           <div class="tags_cloud">
-               {{ render(path('tags_cloud')) }}
-           </div>
-          </div>
-     </div>
- </div>
+    <div class="banner__area section d-flex align-items-center justify-content-center">
+        <div class="banner__wrap">
+            <div class="banner__content text-white text-center">
+                <h6 class="mb-4">Oxford Dictionary</h6>
+                <p class="mb-4">
+                    The largest and most trusted free online dictionary for learners of British and American English
+                </p>
+                <div class="banner__search-area d-flex align-items-center mb-4">
+                    <form action="{{ path('searchPage') }}" method="get">
+                        <input class="form-control  banner__search mr-3" type="text" placeholder="Type here ..."
+                               aria-label="Search" name="word">
+                        <button class="btn-special">Search</button>
+                    </form>
+                </div>
+
+                <div class="tags_cloud">
+                    {{ render(path('tags_cloud')) }}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
