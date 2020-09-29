@@ -14,9 +14,24 @@ body{
     width:100vw;
 }
 
+.btn-container{
+    display: flex;
+    justify-content: center;
+    width: 70px !important;
+}
+
+.cl-blue{
+    color: #1bb1dc;
+}
+
 .section{
     min-height:100vh;
     width:100vw;
+}
+
+.banner__content p{
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .banner__img img{
@@ -30,6 +45,7 @@ body{
     width: 90%;
     position: relative;
     z-index: 2;
+    padding-left:70px;
 }
 
 .banner__img{
@@ -85,7 +101,7 @@ body{
 }
 
 .btn-special:hover{
-    background-color: white;
+    background-color:transparent;
     border:1px solid #1bb1dc;
     color:#1bb1dc;
 }
@@ -116,6 +132,25 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+}
+
+.wrap-md{
+    max-width:900px;
+    margin:0 auto;
+    width:90%;
+}
+
+.icon{
+    max-width:400px;
+}
+
+
+.loading{
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-color: #343a40!important;
+    z-index:88888888888;
 }
 
 footer{
@@ -152,6 +187,104 @@ footer{
     z-index:444;
 }
 
+.banner__show-box{
+    left:0;
+    top:0;
+}
+
+.none{
+    display:none !important;
+}
+
+.banner__show-box button{
+    margin: 8px 8px 8px 0;
+    background-color: #ffd740;
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    line-height: 36px;
+    overflow: visible;
+    min-width: 0;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    flex-shrink: 0;
+    border:none;
+    font-weight:600;
+}
+
+.animation{
+    animation-name:show__tags;
+}
+
+
+
+.tags_cloud{
+    animation-timing-function: ease-in;
+    animation-duration: 1.7s;
+}
+
+
+@keyframes show__tags{
+    0%{
+        opacity:0;
+        height:0px;
+    }
+    50% {
+        opacity:0.5;
+    }
+    to{
+        opacity:1;
+        height:auto;
+    }
+}
+
+@-moz-keyframes show__tags{
+    0%{
+        opacity:0;
+        height:0px;
+    }
+    50% {
+        opacity:0.5;
+    }
+    to{
+        opacity:1;
+        height:auto;
+    }
+}
+
+@-o-keyframes show__tags{
+    0%{
+        opacity:0;
+        height:0px;
+    }
+    50% {
+        opacity:0.5;
+    }
+    to{
+        opacity:1;
+        height:auto;
+    }
+}
+
+@-webkit-keyframes show__tags{
+    0%{
+        opacity:0;
+        height:0px;
+    }
+    50% {
+        opacity:0.5;
+    }
+    to{
+        opacity:1;
+        height:auto;
+    }
+}
+
 @media(min-width:992px){
   #navbarSupportedContent {
     max-width:570px;
@@ -184,7 +317,7 @@ footer{
 }
 
 
-@media (max-width:700px){
+@media (max-width:970px){
     .banner__img{
         display: none !important;
     }

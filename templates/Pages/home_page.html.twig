@@ -3,21 +3,32 @@
 {% block content %}
     <div class="banner__area section center">
         <div class="banner__wrap d-flex justify-content-start ">
-           <div class="banner__content  center align-items-start flex-column">
+           <div class="banner__content  center align-items-start flex-column position-relative">
+            
+             <div class="banner__show-box position-absolute">
+                  <div class="btn-container">
+                    <button id="btn">
+                      Tags
+                    </button>
+                  </div>
+             </div>
+
              <div class="text-left">
-                <h6 class="mb-4">Oxford Dictionary</h6>
+                <h6 class="mb-2"><span class="cl-blue">Free </span>Oxford Dictionary</h6>
+
                 <div class="banner__search-area d-flex align-items-center mb-4">
-                    <form action="{{ path('searchPage') }}" method="get">
+                    <form action="{{ path('searchPage') }}" method="get" class="d-flex align-items-center">
                         <input class=" banner__search form-control  mr-3" type="text" placeholder="Type here ..."
                                aria-label="Search" name="word">
                         <button class="btn-special">Search</button>
                     </form>
                 </div>
+               </div>
 
-                <div class="tags_cloud">
+                <div class="tags_cloud" id="tags_cloud">
                     {{ render(path('tags_cloud')) }}
                 </div>
-               </div>
+                
             </div>
             <div class="banner__img">
                <img  src="/client/img/banner.svg" alt="..."/>

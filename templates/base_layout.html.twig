@@ -10,11 +10,16 @@
         {% endblock %}
     </head>
     <body class="bg-light">
+
         {% include('./Components/header.html.twig')%}
+        {% include('./Components/loading.html')%}
+
         <section class="section">
           {% block content %}{% endblock %}
-        </section>  
+        </section> 
+
         {% block javascripts %}{% endblock %}
+
         {% include('./Components/footer.html.twig')%}
     </body>
 </html>
