@@ -11,7 +11,9 @@
     </head>
     <body class="bg-light">
         {% include('./Components/header.html.twig')%}
-        {% block content %}{% endblock %}
+        <section class="section">
+          {% block content %}{% endblock %}
+        </section>  
         {% block javascripts %}{% endblock %}
         {% include('./Components/footer.html.twig')%}
     </body>
