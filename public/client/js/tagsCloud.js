@@ -22,6 +22,8 @@
     series.labels.template.urlTarget = "_blank";
     series.labels.template.tooltipText = "{word}: {value}";
 
+    series.labels.template.url = "/search?word={word}";
+
     var hoverState = series.labels.template.states.create("hover");
     hoverState.properties.fill = am4core.color("#FF0000");
 
