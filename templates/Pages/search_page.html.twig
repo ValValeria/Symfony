@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_layout.html.twig' %}
 
 {% block title %} Meaning of {{ word }} in English {% endblock %}
 
@@ -13,15 +13,13 @@
                     <source src="{{ pronunciation }}" type="audio/mp3">
                 </audio>
                 {% for entry in entries %}
-                    <h3>#{{ loop.index }}</h3>
-
-                    Oxford Dictionary defines as:
+                <h3>#{{ loop.index }}</h3>
+                Oxford Dictionary defines as:
                     <ul>
                         {% for definition in entry.definitions %}
-                            <li>{{ definition }}</li>
-                        {% endfor %}
+                        <li>{{ definition }}</li>
+                 {% endfor %}
                     </ul>
-
                 {% endfor %}
             </div>
         </div>
