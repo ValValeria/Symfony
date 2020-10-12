@@ -9,7 +9,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class TagsCloudController extends AbstractController
 {
     /**
-     * @Route("/tags-cloud", name="tags_cloud")
      * @param TagsCloudInterface $tagsCloudService
      * @return \Symfony\Component\HttpFoundation\Response
      */

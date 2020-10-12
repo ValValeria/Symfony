@@ -5,9 +5,21 @@
  * GET / - home page
  > ![alt text](https://github.com/alexanderzenchenko/odclient/blob/master/screen.PNG)
 
-## Tasks for developers
-- [x]  Create a "basic layout"
+## Requirements
+* PHP 7.2.5 or higher
+* Composer
 
-## How to run the app
- This is the common workflow to serve a Symfony project
- * **symfony server:start**
+## How to install
+* Clone to your local repository
+* `cd` into cloned repository folder
+* Execute in terminal `composer install`
+* Execute in terminal `yarn install`
+* Execute in terminal `yarn encore dev`
+* Into .env file add/fill parameters API_ID, API_KEY and DATABASE_URL
+* Execute in terminal `php bin/console doctrine:database:create`
+* Execute in terminal `php bin/console doctrine:migrations:migrate`
+* If you use symfony cli execute `symfony server:start` or `php -S localhost:8000 -t public/` 
+
+
+## Installing fixtures
+* Execute in terminal `php bin/console doctrine:fixtures:load`

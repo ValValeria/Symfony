@@ -2,23 +2,30 @@
 
 {% block title %} Meaning of {{ word }} in English {% endblock %}
 
-{% block body %}
+{% block content %}
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1> {{ word }} </h1>
-                Pronunciations:
-                <audio controls>
-                    <source src="{{ pronunciation }}" type="audio/mp3">
-                </audio>
+                <h1 class="word">{{ word|upper }}</h1>
                 {% for entry in entries %}
-                <h3>#{{ loop.index }}</h3>
-                Oxford Dictionary defines as:
+                    <h3>#{{ loop.index }}</h3>
+
+                    Definitions:
                     <ul>
                         {% for definition in entry.definitions %}
-                        <li>{{ definition }}</li>
-                 {% endfor %}
+                            <li>{{ definition }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    Pronunciations:
+                    <ul class="list-unstyled">
+                        {% for pronunciation in entry.pronunciations %}
+                            <li>
+                                <audio controls src="{{ pronunciation }}">
+                                </audio>
+                            </li>
+                        {% endfor %}
                     </ul>
                 {% endfor %}
             </div>

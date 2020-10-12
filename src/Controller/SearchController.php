@@ -13,18 +13,23 @@ class SearchController extends AbstractController
     {
         $word = $request->query->get('word');
 
+        if (!trim($word)) {
+            $this->addFlash('notice', 'Please enter some word');
+            return $this->redirectToRoute('mainPage');
+        }
+
         try {
             $entries = $dictionary->entries('en-gb', $word);
         } catch (\Exception $e) {
-            $this->addFlash('notice', $e->getMessage());
-            return $this->redirectToRoute('index_page');
+            $this->addFlash('notice', "Word not found");
+            return $this->redirectToRoute('mainPage');
         }
 
         $sdbw->incCount($word);
 
         return $this->render('Pages/search_page.html.twig', [
             'word' => $word,
-            'entries' => $entries
+            'entries' => $entries,
         ]);
     }
 }

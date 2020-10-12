@@ -7,3 +7,8 @@ searchPage:
      path: /search
      controller: App\Controller\SearchController::index
      methods: GET
+
+tagsCloud:
+     path: /tags-cloud
+     controller: App\Controller\TagsCloudController::index
+     methods: GET
