@@ -13,8 +13,6 @@
 * Clone to your local repository
 * `cd` into cloned repository folder
 * Execute in terminal `composer install`
-* Execute in terminal `yarn install`
-* Execute in terminal `yarn encore dev`
 * Into .env file add/fill parameters API_ID, API_KEY and DATABASE_URL
 * Execute in terminal `php bin/console doctrine:database:create`
 * Execute in terminal `php bin/console doctrine:migrations:migrate`
